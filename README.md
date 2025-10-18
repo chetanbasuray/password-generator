@@ -3,6 +3,8 @@
 A modern, client-side **Password Generator** built with Next.js, React, Framer Motion, and TailwindCSS.  
 Generate multiple strong passwords at once with a beautiful animated UI and click-to-copy functionality.
 
+Live Demo: <https://password-generator-one-wheat.vercel.app/>
+
 ---
 
 ## Features
