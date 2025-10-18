@@ -48,7 +48,7 @@ export default function PasswordGenerator({ darkMode = true }) {
             <span>Length: {length}</span>
             <input
               type="range"
-              min="4"
+              min="8"
               max="50"
               value={length}
               onChange={(e) => setLength(e.target.value)}
