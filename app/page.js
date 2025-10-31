@@ -34,13 +34,19 @@ export default function Home() {
 
       {/* Theme toggle */}
       <button
+        type="button"
         onClick={() => setDarkMode(!darkMode)}
-        className="absolute top-6 right-6 bg-white/20 backdrop-blur-lg p-2 rounded-full shadow-md hover:bg-white/30 transition z-20"
+        className="absolute top-6 right-6 bg-white/20 backdrop-blur-lg p-2 rounded-full shadow-md hover:bg-white/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-300 transition z-20"
+        aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+        title={darkMode ? "Switch to light mode" : "Switch to dark mode"}
       >
+        <span className="sr-only">
+          {darkMode ? "Toggle to light mode" : "Toggle to dark mode"}
+        </span>
         {darkMode ? (
-          <Sun className="text-yellow-300" size={20} />
+          <Sun className="text-yellow-200" size={20} aria-hidden="true" />
         ) : (
-          <Moon className="text-gray-800" size={20} />
+          <Moon className="text-gray-900" size={20} aria-hidden="true" />
         )}
       </button>
 
@@ -48,8 +54,8 @@ export default function Home() {
       <div
         className={`z-10 backdrop-blur-xl shadow-2xl rounded-2xl p-8 max-w-md w-11/12 text-center transition-colors duration-500 ${
           darkMode
-            ? "bg-white/10 border border-white/20 text-white"
-            : "bg-white/90 border border-gray-300 text-gray-900"
+            ? "bg-slate-900/80 border border-emerald-500/40 text-emerald-50"
+            : "bg-white border border-emerald-200 text-gray-900"
         }`}
       >
         <h1 className="text-3xl font-bold mb-6">Password Generator</h1>
@@ -76,8 +82,8 @@ export default function Home() {
             key={i}
             className={`p-6 rounded-xl w-72 text-center backdrop-blur-lg transition-all duration-300 transform ${
               darkMode
-                ? "bg-white/10 border border-white/20 text-white hover:scale-105 hover:shadow-lg"
-                : "bg-white/80 border border-gray-300 text-gray-900 hover:scale-105 hover:shadow-lg"
+                ? "bg-slate-900/70 border border-emerald-500/30 text-emerald-100 hover:scale-105 hover:shadow-lg"
+                : "bg-white border border-emerald-200 text-gray-900 hover:scale-105 hover:shadow-lg"
             }`}
           >
             <h2 className="font-semibold text-lg mb-3">{card.title}</h2>

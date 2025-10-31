@@ -90,23 +90,26 @@ export default function PasswordGenerator({ darkMode = true }) {
         </div>
 
         <button
+          type="button"
           onClick={generatePassword}
-          className="mt-6 w-full px-4 py-3 rounded-lg font-semibold bg-green-500 text-white hover:bg-green-600 transition-shadow shadow"
+          className="mt-6 w-full px-4 py-3 rounded-lg font-semibold bg-emerald-600 text-white hover:bg-emerald-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-200 transition-shadow shadow"
         >
           Generate Passwords
         </button>
 
         {passwords.length > 0 ? (
-          <div className={`mt-5 grid gap-3`}>
+          <div className={`mt-5 grid gap-3`} aria-live="polite">
             {passwords.map((pwd, index) => (
-              <div
+              <button
                 key={index}
+                type="button"
                 onClick={() => copyPassword(pwd, index)}
-                className={`cursor-pointer font-mono break-all p-3 rounded-lg transition-colors ${
+                className={`text-left cursor-pointer font-mono break-all p-3 rounded-lg transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-200 ${
                   darkMode
-                    ? "bg-black/40 text-green-100 hover:bg-black/50"
-                    : "bg-gray-100 text-gray-900 hover:bg-gray-200"
+                    ? "bg-slate-900/70 text-emerald-100 hover:bg-slate-900"
+                    : "bg-white text-gray-900 hover:bg-emerald-50"
                 }`}
+                aria-label={`Copy password ${index + 1}`}
               >
                 {pwd}
                 {copiedIndex === index && (
@@ -122,11 +125,15 @@ export default function PasswordGenerator({ darkMode = true }) {
                         Copied!
                     </span>
                 )}
-              </div>
+              </button>
             ))}
           </div>
         ) : (
-          <div className={`mt-5 p-4 rounded-lg ${darkMode ? "bg-white/6 text-gray-200" : "bg-gray-50 text-gray-600"}`}>
+          <div
+            className={`mt-5 p-4 rounded-lg ${
+              darkMode ? "bg-slate-900/70 text-emerald-100" : "bg-white text-gray-700"
+            }`}
+          >
             <p className="text-sm">Generate passwords to see them here.</p>
           </div>
         )}
