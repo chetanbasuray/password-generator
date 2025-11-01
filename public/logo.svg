@@ -1,0 +1,19 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="aurora" x1="16" y1="12" x2="112" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6EF7E1" />
+      <stop offset="1" stop-color="#1CA4C9" />
+    </linearGradient>
+    <linearGradient id="glow" x1="64" y1="20" x2="64" y2="108" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.92" />
+      <stop offset="1" stop-color="#E1FFFB" stop-opacity="0.35" />
+    </linearGradient>
+  </defs>
+  <rect x="12" y="12" width="104" height="104" rx="28" fill="url(#aurora)" />
+  <path
+    d="M83 44C83 35.7157 76.2843 29 68 29H60C51.7157 29 45 35.7157 45 44V72.5C45 82.1649 52.8351 90 62.5 90C72.1649 90 80 82.1649 80 72.5V62H70V73C70 76.3137 67.3137 79 64 79C60.6863 79 58 76.3137 58 73V44C58 41.7909 59.7909 40 62 40H66C68.2091 40 70 41.7909 70 44V48H83V44Z"
+    fill="url(#glow)"
+  />
+  <circle cx="90" cy="84" r="12" fill="#0B2F40" opacity="0.35" />
+  <circle cx="36" cy="38" r="10" fill="#FFFFFF" opacity="0.18" />
+</svg>
