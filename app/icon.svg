@@ -1,0 +1,13 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="icon-aurora" x1="6" y1="6" x2="58" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6EF7E1" />
+      <stop offset="1" stop-color="#1CA4C9" />
+    </linearGradient>
+  </defs>
+  <rect x="6" y="6" width="52" height="52" rx="14" fill="url(#icon-aurora)" />
+  <path
+    d="M41 20C41 15.5817 37.4183 12 33 12H31C26.5817 12 23 15.5817 23 20V36.5C23 41.1944 26.8056 45 31.5 45C36.1944 45 40 41.1944 40 36.5V31H35V36C35 37.6569 33.6569 39 32 39C30.3431 39 29 37.6569 29 36V20C29 18.8954 29.8954 18 31 18H33C34.1046 18 35 18.8954 35 20V22H41V20Z"
+    fill="#F4FFFC"
+  />
+</svg>
